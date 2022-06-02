@@ -14,8 +14,8 @@ export class CreateBooks1654193618506 implements MigrationInterface {
             generationStrategy: "increment",
           },
           {
-            name: "user",
-            type: "varchar",
+            name: "user_id",
+            type: "int",
           },
           {
             name: "title",
@@ -33,6 +33,15 @@ export class CreateBooks1654193618506 implements MigrationInterface {
             name: "created_at",
             type: "timestamp",
             default: "now()",
+          },
+        ],
+
+        foreignKeys: [
+          {
+            name: "fk_books_user",
+            columnNames: ["user_id"],
+            referencedTableName: "users",
+            referencedColumnNames: ["id"],
           },
         ],
       })
