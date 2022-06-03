@@ -6,15 +6,16 @@ import {
   ManyToOne,
   JoinColumn,
 } from "typeorm";
+import {v4 as uuid} from "uuid";
 import { User } from "./User";
 
 @Entity("books")
 export class Book {
   @PrimaryColumn()
-  id!: number;
+  id!: string;
 
   @Column()
-  user_id!: number;
+  user_id!: string;
 
   @ManyToOne(() => User)
   @JoinColumn({ name: "user_id" })
@@ -31,4 +32,8 @@ export class Book {
 
   @Column()
   created_at!: Date;
+
+  constructor(){
+    if(!this.id) this.id = uuid()
+  }
 }

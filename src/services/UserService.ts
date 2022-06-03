@@ -2,11 +2,10 @@ import { getRepository } from "typeorm";
 import { User } from "../entities/User";
 
 type UserRequest = {
-  id: number;
-  name: string;
-  email: string;
-  password: string;
-  created_at: Date;
+  id?: string;
+  name?: string;
+  email?: string;
+  password?: string;
 };
 
 export class UserService {
@@ -45,14 +44,14 @@ export class UserService {
     user.password = password ? password : user.password;
 
     await repo.save(user);
-    
+
     return user;
   }
 
-  async delete(id:string) {
+  async delete(id: string) {
     const repo = getRepository(User);
 
-    if(!(await repo.findOne(id))) return new Error("Usuário não existe!");
-    return repo.delete(id)
+    if (!(await repo.findOne(id))) return new Error("Usuário não existe!");
+    return repo.delete(id);
   }
 }

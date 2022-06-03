@@ -2,12 +2,12 @@ import { getRepository } from "typeorm";
 import { Book } from "./../entities/Book";
 
 type BookRequest = {
-  id: number;
-  user_id: number;
-  title: string;
-  description: string;
-  release_date: Date;
-  created_at: Date;
+  id?: string;
+  user_id?: string;
+  title?: string;
+  description?: string;
+  release_date?: Date;
+  created_at?: Date;
 };
 
 export class BookService {

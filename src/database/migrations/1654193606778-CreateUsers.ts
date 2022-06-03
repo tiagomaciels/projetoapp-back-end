@@ -8,10 +8,8 @@ export class CreateUsers1654193606778 implements MigrationInterface {
         columns: [
           {
             name: "id",
-            type: "int",
+            type: "varchar",
             isPrimary: true,
-            isGenerated: true,
-            generationStrategy: "increment",
           },
           {
             name: "name",
@@ -31,7 +29,7 @@ export class CreateUsers1654193606778 implements MigrationInterface {
           {
             name: "created_at",
             type: "timestamp",
-            default: "now()",
+            default: "CURRENT_TIMESTAMP",
           },
         ],
       })

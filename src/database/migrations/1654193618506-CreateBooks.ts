@@ -8,14 +8,12 @@ export class CreateBooks1654193618506 implements MigrationInterface {
         columns: [
           {
             name: "id",
-            type: "int",
-            isPrimary: true,
-            isGenerated: true,
-            generationStrategy: "increment",
+            type: "varchar",
+            isPrimary: true
           },
           {
             name: "user_id",
-            type: "int",
+            type: "varchar",
           },
           {
             name: "title",
