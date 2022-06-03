@@ -27,7 +27,7 @@ export class Book {
   description!: string;
 
   @Column()
-  release_date!: string;
+  release_date!: Date;
 
   @Column()
   created_at!: Date;

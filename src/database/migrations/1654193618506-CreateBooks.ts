@@ -32,7 +32,7 @@ export class CreateBooks1654193618506 implements MigrationInterface {
           {
             name: "created_at",
             type: "timestamp",
-            default: "now()",
+            default: "CURRENT_TIMESTAMP",
           },
         ],
 
