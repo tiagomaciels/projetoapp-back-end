@@ -1,25 +1,15 @@
-import {
-  Entity,
-  Column,
-  CreateDateColumn,
-  PrimaryColumn,
-  ManyToOne,
-  JoinColumn,
-} from "typeorm";
-import {v4 as uuid} from "uuid";
-import { User } from "./User";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { v4 as uuid } from 'uuid';
+
+import { User } from './User';
 
 @Entity("books")
 export class Book {
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn()
   id!: string;
 
   @Column()
   user_id!: string;
-
-  @ManyToOne(() => User)
-  @JoinColumn({ name: "user_id" })
-  user!: User;
 
   @Column()
   title!: string;
@@ -30,10 +20,14 @@ export class Book {
   @Column()
   release_date!: Date;
 
-  @Column()
+  @ManyToOne(() => User, (user) => user.books)
+  @JoinColumn({ name: "user_id" })
+  users!: User;
+
+  @CreateDateColumn()
   created_at!: Date;
 
-  constructor(){
-    if(!this.id) this.id = uuid()
+  constructor() {
+    if (!this.id) this.id = uuid();
   }
 }

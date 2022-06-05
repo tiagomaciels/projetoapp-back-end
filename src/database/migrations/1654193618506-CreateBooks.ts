@@ -9,7 +9,7 @@ export class CreateBooks1654193618506 implements MigrationInterface {
           {
             name: "id",
             type: "varchar",
-            isPrimary: true
+            isPrimary: true,
           },
           {
             name: "user_id",
