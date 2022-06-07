@@ -4,10 +4,12 @@ import * as bcrypt from 'bcrypt';
 import { NextFunction, Request, Response } from 'express';
 import * as jwt from 'jsonwebtoken';
 import { getRepository } from 'typeorm';
+import axios from 'axios';
 
 import { User } from '../entities/User';
 
 export class AuthController {
+
   protectedRoute(req: Request, res: Response, next: NextFunction) {
     let token = req.headers.authorization;
     if (!token || token.length < 8) {
@@ -70,11 +72,14 @@ export class AuthController {
         }
       );
 
+      const affirmationApi = await axios.get(process.env.AFFIRMATIONSAPI as string)
+
       return res.json({
         token_type: "Bearer",
         access_token,
         expires_in: expiresIn,
-      });
+        user: { id: user.id, name: user.name, email: user.email, affirmation: affirmationApi.data.affirmation }        
+      },);
     } catch (err) {
       res.status(400);
     }
