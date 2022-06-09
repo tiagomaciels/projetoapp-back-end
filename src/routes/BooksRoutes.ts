@@ -10,7 +10,7 @@ routes
 
 routes
   .get("/:id", new BookController().getOne)
-  .put("/:user_id", new BookController().update)
+  .put("/:id", new BookController().update)
   .delete("/:id", new BookController().delete);
 
 export { routes as booksRoutes };
