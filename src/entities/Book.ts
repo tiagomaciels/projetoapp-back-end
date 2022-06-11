@@ -20,7 +20,9 @@ export class Book {
   @Column()
   release_date!: Date;
 
-  @ManyToOne(() => User, (user) => user.books)
+  @ManyToOne(() => User, (user) => user.books, {
+    onDelete: 'CASCADE'
+  })
   @JoinColumn({ name: "user_id" })
   users!: User;
 

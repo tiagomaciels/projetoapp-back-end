@@ -21,7 +21,9 @@ export class User {
   @Column()
   created_at!: Date;
 
-  @OneToMany(() => Book, (book) => book.users)
+  @OneToMany(() => Book, (book) => book.users, {
+    cascade: true
+  })
   books!: Book[];
 
   @BeforeInsert()

@@ -40,6 +40,7 @@ export class CreateBooks1654193618506 implements MigrationInterface {
             columnNames: ["user_id"],
             referencedTableName: "users",
             referencedColumnNames: ["id"],
+            onDelete: "CASCADE",
           },
         ],
       })
