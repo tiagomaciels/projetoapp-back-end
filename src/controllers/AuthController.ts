@@ -41,7 +41,7 @@ export class AuthController {
 
       if (!email || !password)
         return res
-          .status(401)
+          .status(406)
           .json({ message: "Você deve digitar o e-mail e a senha!" });
 
       const repo = getRepository(User);
