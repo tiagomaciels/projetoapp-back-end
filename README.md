@@ -3,6 +3,8 @@
 
 Com CRUD de Usuários e livros, e consumindo as APIs: Affirmations API e PokeAPI
 
+* Utilizando Json Web Token, Bcrypt, mysql2, etc...
+
 # Instalação
 
 * Clonar o projeto
