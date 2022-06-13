@@ -5,15 +5,15 @@
 
 * Clonar o projeto
 
-* Adicionar o arquivo .env no root da aplicação, por exemplo:
+* Adicionar o arquivo .env no root da aplicação com as seguintes informações:
 
 TYPEORM_CONNECTION = mysql
 
 TYPEORM_HOST = localhost
 
-TYPEORM_USERNAME = root
+TYPEORM_USERNAME = Seu Usuário do MySQL
 
-TYPEORM_PASSWORD = admin
+TYPEORM_PASSWORD = Sua Senha do MySQL
 
 TYPEORM_DATABASE = projetoapp
 
