@@ -52,7 +52,7 @@ export class AuthController {
       });
 
       if (!user) {
-        return res.status(403).json({ message: "e-mail ou senha inválido" });
+        return res.status(404).json({ message: "e-mail ou senha inválido" });
       }
 
       const isValid = await bcrypt.compare(password, user.password);
