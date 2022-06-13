@@ -1,5 +1,7 @@
 # projetoapp-back-end
-## Projeto back-end em TypeScript utilizando Node + Express + MySQL + TypeORM usando Affirmations API e PokeAPI
+## Projeto back-end em TypeScript utilizando Node + Express + MySQL + TypeORM
+
+Com CRUD de Usuários e livros, e consumindo as APIs: Affirmations API e PokeAPI
 
 # Instalação
 
