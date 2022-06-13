@@ -1,8 +1,6 @@
 # projetoapp-back-end
 ## Projeto back-end em TypeScript utilizando Node + Express + MySQL + TypeORM usando Affirmations API e PokeAPI
 
-Com Angular Material, Sweet Alert, Json Web Token, Bcrypt, Reactive forms, RxJs, observables, pipes, etc...
-
 # Instalação
 
 * Clonar o projeto
