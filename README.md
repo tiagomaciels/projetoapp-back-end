@@ -1,5 +1,5 @@
-# projetoapp-back-end
-## Projeto back-end em TypeScript utilizando Node + Express + MySQL + TypeORM
+# Projeto do início dos meus estudos em desenvolvimento web [2022]
+## Back-end em TypeScript utilizando Node + Express + MySQL + TypeORM
 
 Com CRUD de Usuários e livros, e consumindo as APIs: Affirmations API e PokeAPI
 
