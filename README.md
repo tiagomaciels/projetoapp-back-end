@@ -1,4 +1,4 @@
-# Projeto do início dos meus estudos em desenvolvimento web [2022]
+# [2022] Projeto do início dos meus estudos em desenvolvimento web
 ## Back-end em TypeScript utilizando Node + Express + MySQL + TypeORM
 
 Com CRUD de Usuários e livros, e consumindo as APIs: Affirmations API e PokeAPI
